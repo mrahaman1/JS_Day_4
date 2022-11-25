@@ -26,7 +26,7 @@
     </pre>
     
        
-    <h3>2.Find the Sum.</h3>
+    <h3>Find the Sum.</h3>
     <p>Write a program which takes an array as input from the user and find out the sum of the array elements.</p>
     <pre>
         const Find_Sum = (array, N) => 
@@ -40,7 +40,7 @@
           
     </pre>
         
-    <h3>3.Count Occurrences</h3>
+    <h3>Count Occurrences</h3>
     <p>You are given an array 
       A
        containing 
@@ -65,7 +65,7 @@
         };
     </pre>
       
-    <h3>4.Even Odd</h3>
+    <h3>Even Odd</h3>
     <p>You are given an array 
       A
        containing 
@@ -106,7 +106,7 @@
       };
     </pre>
        
-    <h3>5.Find whether the number is present or not.</h3>
+    <h3>Find whether the number is present or not.</h3>
     <p>Write a program which takes an array as input from the user and a number.
       Check whether the number is present or not.</p>
     <pre>
@@ -122,7 +122,7 @@
         };
     </pre>
         
-    <h3>6.Higher Age.</h3>
+    <h3>Higher Age.</h3>
     <p>You are given an array 
       A
        containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 
@@ -146,7 +146,7 @@
       };
     </pre>
         
-    <h3>7.Increment the Array Elements</h3>
+    <h3>Increment the Array Elements</h3>
     <p>You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.</p>
     
     <pre>
@@ -159,7 +159,7 @@
       };
     </pre>
        
-    <h3>8.Pass or Fail</h3>
+    <h3>Pass or Fail</h3>
     <p>You are given an array 
       A
        containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 
@@ -192,12 +192,14 @@
       M
       .</p>
     <pre>
-        
-
-
+      function Unique_Shirts (arr,N) {
+        const arrCopy = [...arr]
+        const distinctColors = arr.filter((color, index) => arr.indexOf(color) === arr.lastIndexOf(color))
+        return distinctColors.length
+      }
     </pre>
 
-    <h3>10. Min and Max</h3>
+    <h3>Min and Max</h3>
     <p>Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.
       The problem statement is simple- given 
       N
@@ -224,8 +226,8 @@
         }
        </pre>
 
-       <h3>11. Birthday Game</h3>
-       <p>Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate bar with him in which each of the squares consists of an integer represented by 
+    <h3>11. Birthday Game</h3>
+    <p>Yatharth and Anamika are playing a game. Anamika loves Yatharth very much and she wants to share a chocolate bar with him in which each of the squares consists of an integer represented by 
         A
         [
         i
@@ -239,9 +241,21 @@
         . 
         
         You must determine how many ways she can divide the chocolate.</p>
-        <pre>
-          
-        </pre>
-     
+    <pre>
+           
+        function Birthday_Game(arr,D ,M) {
+        count =0
+        
+        for(let i=0; i< arr.length; i++){
+          const sequence = arr.slice(i, i+M)
+          const sum = sequence.reduce((a, b)=> a + b, 0)
+          if(sum === D){
+            count++
+          }
+        }
+          return count
+        }
+    </pre>
+
 </body>
 </html>
